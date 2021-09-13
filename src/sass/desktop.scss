@@ -1,0 +1,143 @@
+
+$center: center;
+$flexBox: flex;
+$fonts: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande';
+$columnWrap: column wrap;
+$defaultFontSize: 1.5em;
+$defaultLineHeight: 1.25em;
+$blackBackground: #000000 ;
+$whiteBackground: #ffffff ;
+$lightGreyText: #bababa;
+$darkGreyText: #242424; 
+$day-mode: false;
+
+@debug darken(#bababa, 20%); 
+  @debug lighten(#242424, 20%);
+
+@mixin fullWidth {
+  width: 100%;
+  margin: 5px;
+}
+@mixin day-night($day-mode: true) {
+  @if $day-mode {
+  background-color: $whiteBackground;
+    color: $darkGreyText; 
+  } @else {
+     background-color: $blackBackground;
+    color: $lightGreyText;
+  }
+}
+
+
+
+body{
+  background-color: $whiteBackground;
+  color: $darkGreyText;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  @include day-night;
+}
+  .burger{
+  
+          width: 35px;
+          height: 5px;
+          background-color: #dfdfdf;
+          margin: 6px 0;
+        }
+        #burgerContainer2{
+          display: none;
+      }
+  #wrapper{
+    @include fullWidth;
+      display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  }
+  header{
+      height: 50px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      @include fullWidth;
+background-color: black;
+color: $lightGreyText ;
+
+  }
+  .mainContent{
+      width: 400px;
+      position: absolute;
+      left: 170px;
+      top: 50px;
+      &--swe {
+        @extend .mainContent;
+        display: none;
+      }
+  }
+  #notification{
+      position: absolute;
+      bottom: 0;
+      padding: 500px;
+  }
+  
+  #navbar ul{
+      list-style-type: none;
+  }
+  #navbar a {
+      text-decoration: none; 
+      font-weight: bold;
+  color: #dfdfdf;}
+  
+  
+  #navbar li{
+      margin-left: 20px;
+      float: left;
+      text-decoration: none;
+  }
+  #sidebar{
+      position: fixed;
+      display: block;
+      left: 0px;
+      height: 579px;
+      top: 50px;
+      padding: 17px;
+      background-color:  #dfdfdf ;
+      overflow-y: scroll;  
+       ul{
+      list-style-type: none;
+      padding: 0;
+  }  
+  a {
+      text-decoration: none; 
+      color: black;
+  }
+   li{
+      margin-bottom: 20px;
+  }
+  }
+  
+
+
+  .pageLink{
+      display: none;
+  }
+  footer{
+      position: absolute;
+      bottom: 0;
+  }
+  
+  
+  img{
+    width: 300px;
+}
+.current{
+display: block;
+}
+img{
+    display: none;
+}
