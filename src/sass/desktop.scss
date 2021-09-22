@@ -5,34 +5,34 @@ $fonts: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande';
 $columnWrap: column wrap;
 $defaultFontSize: 1.5em;
 $defaultLineHeight: 1.25em;
-$blackBackground: #000000 ;
-$whiteBackground: #ffffff ;
-$lightGreyText: #bababa;
-$darkGreyText: #242424; 
+$blueBackground: #000745 ;
+$yellowBackground: linear-gradient(90deg, rgb(163, 107, 3) 35%, rgb(255, 252, 102) 100%); ;
+$lightGreenText: #acff6d;
+$darkRedText: #6c0000; 
 $day-mode: false;
 
-@debug darken(#bababa, 20%); 
-  @debug lighten(#242424, 20%);
+@debug darken(#6c0000, 20%); 
+  @debug lighten(#acff6d, 20%);
 
 @mixin fullWidth {
-  width: 100%;
+  width: 100vw;
   margin: 5px;
 }
 @mixin day-night($day-mode: true) {
   @if $day-mode {
-  background-color: $whiteBackground;
-    color: $darkGreyText; 
+  background: $yellowBackground;
+    color: $darkRedText; 
   } @else {
      background-color: $blackBackground;
-    color: $lightGreyText;
+    color: $lightGreenText;
   }
 }
 
 
 
 body{
-  background-color: $whiteBackground;
-  color: $darkGreyText;
+  background-color: $yellowBackground;
+  color: $darkRedText;
   display: flex;
   align-content: center;
   align-items: center;
@@ -61,19 +61,22 @@ body{
   }
   header{
       height: 50px;
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       @include fullWidth;
-background-color: black;
-color: $lightGreyText ;
+      border: 2px solid white;
+background-color: $blueBackground;
+color: $lightGreenText ;
 
   }
   .mainContent{
       width: 400px;
       position: absolute;
       left: 170px;
-      top: 50px;
+      top: 100px;
+      border: 2px solid black;
+      background-color: #71fffa;
       &--swe {
         @extend .mainContent;
         display: none;
@@ -91,7 +94,7 @@ color: $lightGreyText ;
   #navbar a {
       text-decoration: none; 
       font-weight: bold;
-  color: #dfdfdf;}
+  color: $lightGreenText;}
   
   
   #navbar li{
