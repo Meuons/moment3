@@ -18,16 +18,6 @@ const gulp = require('gulp');
 const cssScss = require('gulp-css-scss');
 
 
-
-
-
-function reloadTask() {
-browserSync.init({
-    server: "./pub"
-});
-}
-
-
 //Filepaths
 const files = { 
     htmlPath: "src/**/*.html",
@@ -71,10 +61,13 @@ function jsTask() {
 //Watch
 
 function watchTask(){
-  watch([files.htmlPath, files.jsPath, files.imgPath, files.sassPath], parallel(htmlTask, jsTask, imgTask, sassTask, reloadTask)).on("change", browserSync.reload);
+  browserSync.init({
+    server: "./pub"
+  });
+  watch([files.htmlPath, files.jsPath, files.imgPath, files.sassPath], parallel(htmlTask, jsTask, imgTask, sassTask)).on("change", browserSync.reload);
 }
 
 exports.default = series (
-    parallel(htmlTask, jsTask, imgTask, sassTask, reloadTask),
+    parallel(htmlTask, jsTask, imgTask, sassTask),
     watchTask
 );
