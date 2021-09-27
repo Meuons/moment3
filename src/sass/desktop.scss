@@ -7,7 +7,7 @@ $defaultFontSize: 1.5em;
 $defaultLineHeight: 1.25em;
 $blueBackground: #000745 ;
 $yellowBackground: linear-gradient(90deg, rgb(163, 107, 3) 35%, rgb(255, 252, 102) 100%); ;
-$lightGreenText: #acff6d;
+$lightGreenText: #9a6c00;
 $darkRedText: #6c0000; 
 $day-mode: false;
 
@@ -28,19 +28,14 @@ $day-mode: false;
   }
 }
 
-
-
 body{
   background-color: $yellowBackground;
   color: $darkRedText;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   @include day-night;
+
 }
   .burger{
   
@@ -57,13 +52,12 @@ body{
       display: flex;
   align-content: center;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  
+  min-height: 100%;
   }
   header{
       height: 50px;
-      position: absolute;
-      top: 0;
-      left: 0;
+
       @include fullWidth;
       border: 2px solid white;
 background-color: $blueBackground;
@@ -72,15 +66,15 @@ color: $lightGreenText ;
   }
   .mainContent{
       width: 400px;
-      position: absolute;
-      left: 170px;
-      top: 100px;
+
       border: 2px solid black;
       background-color: #71fffa;
       &--swe {
         @extend .mainContent;
         display: none;
       }
+     
+
   }
   #notification{
       position: absolute;
@@ -124,14 +118,23 @@ color: $lightGreenText ;
   }
   }
   
+  .displayImg{
+    display: block;
 
+  }
+  
 
   .pageLink{
       display: none;
   }
   footer{
       position: absolute;
-      bottom: 0;
+right: 0;
+    background: rgb(255, 247, 0);
+    width: 100%;
+    text-align: center;
+
+
   }
   
   
