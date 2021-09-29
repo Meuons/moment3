@@ -37,6 +37,12 @@ body{
   @include day-night;
 
 }
+
+ #rightbutton{
+   position: relative;
+   left: 230px;
+ } 
+
   .burger{
   
           width: 35px;
