@@ -37,12 +37,6 @@ body{
   @include day-night;
 
 }
-
- #rightbutton{
-   position: relative;
-   left: 230px;
- } 
-
   .burger{
   
           width: 35px;
@@ -71,7 +65,11 @@ color: $darkText ;
 
   }
   .mainContent{
-      width: 400px;
+      width: 650px;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      justify-items: center;
   @include round;
       border: 2px solid black;
       background-color: #65e0ff;
@@ -129,7 +127,10 @@ color: $darkText ;
     display: block;
 
   }
-  
+ #rightbutton{
+   position: relative;
+   left: 570px;
+ } 
 
   .pageLink{
       display: none;
@@ -141,12 +142,13 @@ right: 0;
     border: 2px solid black;
     width: 100%;
     text-align: center;
+    margin: 100px;
     @include round;
   }
   
   
   img{
-    width: 300px;
+    width: 650px;
 }
 .current{
 display: block;
