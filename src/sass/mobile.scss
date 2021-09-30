@@ -1,23 +1,20 @@
 @media only screen and (max-width: 468px) {
 
-    #sidebar li{
-        float: left;
-    }
-    #sidebar{
-        height: 150px;
-        padding: 50px;
-        position: fixed;
-        top: -200px;
-        z-index: -1;
-    }
-    #burgerContainer{
-        display: none;
-    }
-    #burgerContainer2{
-        display: block;
-    }
+  
+
     #navbar a{
         font-size: 0.7em;
     }
+    .mainContent{
+        font-size: 0.9em;
     
+        width: 300px;
+    }
+    img{
+        width: 250px;
+    }
+    #rightbutton{
+        position: relative;
+        left: 180px;
+      } 
     }
