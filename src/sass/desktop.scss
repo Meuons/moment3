@@ -6,7 +6,7 @@ $columnWrap: column wrap;
 $defaultFontSize: 1.5em;
 $defaultLineHeight: 1.25em;
 $blueBackground: #00a5e7 ;
-$yellowBackground: linear-gradient(90deg, rgb(255, 200, 200) 35%, rgb(255, 181, 181) 100%); ;
+$pinkBackground: linear-gradient(90deg, rgb(255, 200, 200) 35%, rgb(255, 181, 181) 100%); ;
 $lightGreyText: #e3e3e3;
 $darkText: #000000; 
 $day-mode: false;
@@ -20,10 +20,10 @@ $day-mode: false;
 }
 @mixin day-night($day-mode: true) {
   @if $day-mode {
-  background: $yellowBackground;
+  background: $pinkBackground;
     color: $darkText; 
   } @else {
-     background-color: $blackBackground;
+     background-color: $blueBackground;
     color: $lightGreyText;
   }
 }
@@ -58,7 +58,7 @@ body{
       @include round;
  
       border: 2px solid rgb(0, 0, 0);
-background-color: $blueBackground;
+background-color: #65e0ff;
 color: $darkText ;
 
   }
